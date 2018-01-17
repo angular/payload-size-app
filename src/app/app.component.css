@@ -1,0 +1,26 @@
+.mat-sidenav {
+  min-width: 15vw;
+}
+.mat-sidenav .mat-button {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin: 24px 0;
+}
+
+
+.demo-content {
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+.mat-toolbar .mat-icon {
+  cursor: pointer;
+}
+
+.mat-toolbar .demo-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

@@ -1,0 +1,22 @@
+<ngx-charts-line-chart
+  [scheme]="colorScheme"
+  [results]="chartData"
+  [gradient]="false"
+  [xAxis]="true"
+  [yAxis]="true"
+  [legend]="true"
+  [showXAxisLabel]="true"
+  [showYAxisLabel]="true"
+  [showGridLines]="true"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [autoScale]="true"
+  (select)="onSelect($event)">
+  <ng-template #tooltipTemplate let-model="model">
+    <div>
+      {{model.series}} - {{model.name.toLocaleString()}}
+      <h2>{{model.value}} (diff: {{diffMap[model.series].get(model.name)}})</h2>
+    </div>
+    <p>{{messageMap.get(model.name)}}</p>
+  </ng-template>
+</ngx-charts-line-chart>

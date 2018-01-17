@@ -1,0 +1,14 @@
+
+<div>
+  <h1>{{project}} - {{branch}}</h1>
+  <mat-checkbox [(ngModel)]="showGzip7">Show gzip 7</mat-checkbox>
+  <mat-checkbox [(ngModel)]="showGzip9">Show gzip 9</mat-checkbox>
+</div>
+
+<div class="dashboard-content" *ngFor="let file of files">
+  <h2>{{file}}</h2>
+  <app-dashboard-chart [data]="payloads" *ngIf="payloads" [file]="file"
+                       [showGzip7]="showGzip7" [showGzip9]="showGzip9">
+  </app-dashboard-chart>
+</div>
+

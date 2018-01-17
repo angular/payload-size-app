@@ -1,0 +1,26 @@
+
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" opened="true">
+    <h3 mat-line>Project</h3>
+    <mat-nav-list>
+      <a *ngFor="let p of projectNames"
+         mat-list-item
+         routerLinkActive
+         routerLink="{{p}}/{{branch}}">
+        {{p}}
+      </a>
+    </mat-nav-list>
+
+    <h3 mat-line>Branch</h3>
+    <mat-nav-list>
+      <a *ngFor="let b of branchNames"
+         mat-list-item
+         routerLinkActive
+         routerLink="{{project}}/{{b}}">
+        {{b}}
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
